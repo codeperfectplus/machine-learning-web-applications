@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="container bg-dark text-info text-center">
+    <h1> Predict The Flower </h1>
+</div>
+<div class="container bg-dark text-info text-center">
+        <h2>1 Setosa<h2>
+        <h2>2 versicolor<h2>
+        <h2>3 virginica<h2>
+</div>
+
+<div class="container bg-dark text-info text-center">
+    <h1>The Predicted Flower May be {{result}}.</h1>
+    <a href={% url 'home' %}>Predict Again</a>
+</div>
+
+
+{% endblock body %}

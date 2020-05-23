@@ -4,7 +4,6 @@
     <div class="container text-center">
         <h1> Predict The Flower </h1>
     </div>
-
     <div class="container-fluid m-2 p-3">
         <form method="post" action="predict">
         {% csrf_token %}
@@ -24,7 +23,7 @@
                 <label>Petal Width </label>
                 <input class="form-control" type="number" name="pwidth" placeholder="petalWidth">
             </div>
-            <button type="submit" class="btn btn-primary" style="width:400px">Submit</button>
+            <button type="submit" class="btn btn-dark" style="width:400px">Submit</button>
         </form>
     </div>
 {% endblock body %}
