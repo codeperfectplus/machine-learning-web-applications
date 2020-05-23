@@ -1,15 +1,7 @@
-from django.urls import path, include
-from rest_framework import routers
-
-from server import views
-
-from server.views import IrisViewSet
-
-""" router = routers.DefaultRouter()
-
-router.register(r'Iris', IrisViewSet) """
+from django.urls import path
+from server.views import IndexView, PredictView
 
 urlpatterns = [
-    
-    path('api/', views.IrisViewSet.as_view(), name='get_salary'),
+    path("", IndexView.as_view(), name="home"),
+    path("predict", PredictView.as_view(), name="predict")
 ]
