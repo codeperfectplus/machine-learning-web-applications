@@ -11,17 +11,20 @@ def IndexView(request):
 
 def PredictView(request):
     if request.method == "POST":
-        slength = request.POST['slength']
-        swidth = request.POST['swidth']
-        plength = request.POST['plength']
-        pwidth = request.POST['pwidth']
-        
+        slength = request.POST["slength"]
+        swidth = request.POST["swidth"]
+        plength = request.POST["plength"]
+        pwidth = request.POST["pwidth"]
+
         data = [slength, swidth, plength, pwidth]
-        data = np.array(data).reshape(-1,4)
+        data = np.array(data).reshape(-1, 4)
         result = model.predict(data)
-        print(*result)
-        context = {'result': result[0]}
-        return render(request, 'predict.html', context)
+
+        predict_flower = ['Setosa', 'versicolor', 'virginica']
+        result = predict_flower[result[0]]
+
+        context = {"result": result}
+        return render(request, "predict.html", context)
 
 
 ''' TODO 
