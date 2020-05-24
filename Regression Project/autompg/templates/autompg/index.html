@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container text-center">
+        <h1> Predict The Milage </h1>
+    </div>
+    
+    <div class="container-fluid m-2 p-3">
+        <form method="post" action="mpg_predict">
+        {% csrf_token %}
+            <div class="form-group">
+                <label>cylinders</label>
+                <input class="form-control" type="number" name="cylinders" placeholder="cylinders">
+            </div>
+            <div class="form-group">
+                <label>displacement</label>
+                <input class="form-control" type="number" name="displacement" placeholder="displacement">
+            </div>
+            <div class="form-group">
+                <label>horsepower</label>
+                <input class="form-control" type="number" name="horsepower" placeholder="horsepower">
+            </div>
+            <div class="form-group">
+                <label>weight</label>
+                <input class="form-control" type="number" name="weight" placeholder="weight">
+            </div>
+            <div class="form-group">
+                <label>acceleration</label>
+                <input class="form-control" type="number" name="acceleration" placeholder="acceleration">
+            </div>            
+            <div class="form-group">
+                <label>model year</label>
+                <input class="form-control" type="number" name="modelyear" placeholder="modelyear">
+            </div>
+            <div class="form-group">
+                <label>origin</label>
+                <input class="form-control" type="number" name="origin" placeholder="origin">
+            </div>
+            <button type="submit" class="btn btn-dark" style="width:400px">Submit</button>
+        </form>
+    </div>
+{% endblock %}
