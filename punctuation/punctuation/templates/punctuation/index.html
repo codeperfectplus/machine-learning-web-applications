@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container shadow p-3 mb-2">    
+    <div class="header shadow-lg p-1 rounded bg-primary text-center">
+        <h1 class="display-6 text-white">Remove Punctuation<h1>
+    </div>
+    <form method="post" action="predict" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-group mb-2">
+        <label for="string">Enter Text</label>
+        <textarea rows="4" cols="50" name="string" class="form-control" placeholder="Enter text here to remove Punctuation"></textarea>                    
+
+        <input type="checkbox" name="removePunc">
+        <label for="removePunc">Remove Punctuation Words</label><br>
+        
+        <button type="submit" class="btn btn-dark m-2">Submit</button>
+    </form>
+    </div>
+</div>
+{% endblock content %}
