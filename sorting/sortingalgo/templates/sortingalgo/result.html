@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+    {{result}}
+    <form class="form-group" method="post" action="result">
+        {% csrf_token %}
+        <label for="values">Enter Space Seprated Integer Values</label>
+        <input type="text" name="values" class="form-control" placeholder="Enter Values">
+        <button type="submit" class="btn btn-dark m-2">Submit</button>
+    </form>
+{% endblock content %}
