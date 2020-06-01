@@ -1,55 +1,70 @@
-# Context
+# [AlgorithmHackerRank](https://www.hackerrank.com/domains/algorithms)
 
-The data is technical spec of cars. The dataset is downloaded from UCI Machine Learning Repository
+- [AlgorithmHackerRank](#algorithmhackerrank)
+  - [Introduction](#introduction)
+  - [Get Started](#get-started)
+  - [Difficulty Level](#difficulty-level)
+  - [Usage](#usage)
+  - [Support](#support)
+  - [Contributing](#contributing)
+  - [Authors and acknowledgment](#authors-and-acknowledgment)
+  - [License](#license)
+  - [Project status](#project-status)
+  - [Author](#author)
 
-## Content
+## Introduction
 
-Title: Auto-Mpg Data
+- HackerRank Algorithm Problems
+- Check [AlgorithmHackerRank](https://www.hackerrank.com/domains/algorithms) Challenge.
 
-## Sources
+## Get Started
 
-- (a) Origin: This dataset was taken from the StatLib library which is
-maintained at Carnegie Mellon University. The dataset was
-used in the 1983 American Statistical Association Exposition.
-(c) Date: July 7, 1993
+Download [Python 3](https://python.org/downloads)
 
-Past Usage:
+## Difficulty Level
 
-- See 2b (above)
-Quinlan,R. (1993). Combining Instance-Based and Model-Based Learning.
-In Proceedings on the Tenth International Conference of Machine
-Learning, 236-243, University of Massachusetts, Amherst. Morgan
-Kaufmann.
-Relevant Information:
+Hackerrank has around 5 levels of difficulty:
 
-- This dataset is a slightly modified version of the dataset provided in
-the StatLib library. In line with the use by Ross Quinlan (1993) in
-predicting the attribute "mpg", 8 of the original instances were removed
-because they had unknown values for the "mpg" attribute. The original
-dataset is available in the file "auto-mpg.data-original".
+- Easy
+- Intermediate
+- Hard
+- Expert
+- Advanced.
 
-- "The data concerns city-cycle fuel consumption in miles per gallon,
-to be predicted in terms of 3 multivalued discrete and 5 continuous
-attributes." (Quinlan, 1993)
+I suggest you pick a certain language and start with the warmup challenges to get used to the environment.
 
-Number of Instances: 398
+## Usage
 
-Number of Attributes: 9 including the class attribute
+A good way to start learning python concept.
 
-## Attribute Information
+## Support
 
-- mpg: continuous
-- cylinders: multi-valued discrete
-- displacement: continuous
-- horsepower: continuous
-- weight: continuous
-- acceleration: continuous
-- model year: multi-valued discrete
-- origin: multi-valued discrete
-- car name: string (unique for each instance)
-- Missing Attribute Values: horsepower has 6 missing values
+contributors
 
-### Acknowledgements
+## Contributing
 
-Dataset: UCI Machine Learning Repository
-Data link : <https://archive.ics.uci.edu/ml/datasets/auto+mpg>
+Before submitting a bug, please do the following:
+
+Perform basic troubleshooting steps:
+
+- Make sure you are on the latest version. If you are not on the most recent version, your problem may have been solved already! Upgrading is always the best first step.
+- Try older versions. If you are already on the latest release, try rolling back a few minor versions (e.g. if on 1.7, try 1.5 or 1.6) and see if the problem goes away. This will help the devs narrow down when the problem first arose in the commit log.
+- Try switching up dependency versions. If the software in question has dependencies (other libraries, etc) try upgrading/downgrading those as well.
+
+## Authors and acknowledgment
+
+Show your appreciation to those who have contributed to the project.
+
+## License
+
+For open-source projects, Under MIT License.
+
+## Project status
+
+## Author
+
+- Project: [AlgorithmHackerRank](https://www.hackerrank.com/domains/algorithms)
+- Author: CodePerfectPlus
+- Language: Python
+- Github: <https://github.com/codePerfectPlus>
+- Website: <http://codeperfectplus.github.io/>

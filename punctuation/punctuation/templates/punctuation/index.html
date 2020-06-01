@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
-
+{% block title %}Remove Punctuation{% endblock %}
 {% block content %}
 <div class="container shadow p-3 mb-2">    
     <div class="header shadow-lg p-1 rounded bg-primary text-center">
-        <h1 class="display-6 text-white">Remove Punctuation<h1>
+        <h1 class="display-6 text-white">Remove Punctuation <img src="https://img.icons8.com/fluent/48/000000/project.png"/><h1>
     </div>
     <form method="post" action="predict" enctype="multipart/form-data">
     {% csrf_token %}
@@ -11,10 +11,13 @@
         <label for="string">Enter Text</label>
         <textarea rows="4" cols="50" name="string" class="form-control" placeholder="Enter text here to remove Punctuation"></textarea>                    
 
+        <input type="checkbox" name="removeDigit">
+        <label for="removeDigit">Remove Digit From Text</label><br>
+
         <input type="checkbox" name="removePunc">
-        <label for="removePunc">Remove Punctuation Words</label><br>
-        
-        <button type="submit" class="btn btn-dark m-2">Submit</button>
+        <label for="removePunc">Remove Punctuation Words From Text</label><br>
+                
+        <button class="shadow-lg btn btn-primary btn-primary btn-lg btn-block" type="submit">Submit <i class="fab fa-python"></i></button>  
     </form>
     </div>
 </div>

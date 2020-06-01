@@ -10,9 +10,9 @@ def resultView(request):
         
         redditSearchWord = request.POST["redditSearchWord"]
 
-        result = GetNews(redditSearchWord)            
-        context = {"result": result}
-        print(context)
+        r1,r2,r3,r4,r5 = GetNews(redditSearchWord)            
+        context = {"r1":r1, "r2":r2, "r3":r3, "r4":r4, "r5":r5}
+        #print(context)
 
         return render(request, "reddit/result.html", context)
 
@@ -23,10 +23,12 @@ def GetNews(searchWord):
     subreddit = reddit.subreddit(searchWord)
 
     hot_python = subreddit.hot(limit=10)
-    
-    for submission in hot_python:
-        if not submission.stickied:
-            news = submission.title            
-            return news
+        
+    titleList = []        
+    for submission in hot_python:   
 
-print(GetNews("python"))
+        title = submission.title                
+        titleList.append(title)                
+
+    return  titleList[0], titleList[1], titleList[2], titleList[3], titleList[4],
+

@@ -1,10 +1,25 @@
 {% extends 'base.html' %}
+{% block title %}Result  {% endblock %}
 {% block content %}
-    {{result}}
-    <form class="form-group" method="post" action="result">
-        {% csrf_token %}
-        <label for="values">Enter Space Seprated Integer Values</label>
-        <input type="text" name="values" class="form-control" placeholder="Enter Values">
-        <button type="submit" class="btn btn-dark m-2">Submit</button>
-    </form>
+<div class="alert alert-dismissible alert-info">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  Algorithm Name: {{algo|title}} Sort , Result: {{result}}, Time: {{time}}
+</div>
+<div class="container shadow p-3 mb-2">    
+    <div class="header shadow-lg p-1 rounded bg-primary text-center">
+        <h1 class="display-6 text-white">Sorting <img src="https://img.icons8.com/fluent/48/000000/project.png"/><h1>    
+    </div>
+
+  <form class="form-group" method="post" action="result">
+      {% csrf_token %}
+      <label for="values">Enter Space Seprated Integer Values</label>
+      <input type="text" name="values" class="form-control" placeholder="Enter Values">
+        <p>Please select Your Favourite Algorithm:</p>
+            <input type="radio" id="bubble" name="sort" value="bubble">
+            <label for="sort">Bubble Sort</label><br>
+            <input type="radio" id="merge" name="sort" value="merge">
+            <label for="sort">Merge Sort</label><br>
+      <button class="shadow-lg btn btn-primary btn-primary btn-lg btn-block mt-2" type="submit">Submit <i class="fab fa-python"></i></button>  
+  </form>
+</div>
 {% endblock content %}
