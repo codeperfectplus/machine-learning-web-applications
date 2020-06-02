@@ -23,8 +23,8 @@ def predictView(request):
         print(data)
         data = np.array(data).reshape(-1, 7)
         result = model.predict(data)[0]
-        print(result)
         result = round(result, 2)
         print(result)
         context = {"result": result}
-    return render(request, 'autompg/predict.html',context)
+        
+        return render(request, 'autompg/predict.html',context)

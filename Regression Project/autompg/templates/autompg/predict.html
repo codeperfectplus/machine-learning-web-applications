@@ -1,8 +1,53 @@
 {% extends 'base.html' %}
+{% block title %}Predicted Result{% endblock %}
 {% block content %}
-<div class="container bg-dark text-info text-center">
-    <h1>The Predicted Milage near to {{result}}</h1>
-    <a href={% url 'autompg_home' %}>Predict Again</a>
+<div class="alert alert-dismissible alert-info">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  The Predicted Milage near to {{result}}
+</div>
+<!---->
+<div class="container shadow p-3 mb-2">
+    <form name="myForm" onsubmit="return validateForm()" method="post" action="mpg_predict" required>    
+    <div class="header shadow-lg p-1 rounded bg-primary text-center">
+        <h1 class="display-6 text-white">Regression <img src="https://img.icons8.com/fluent/48/000000/project.png"/><h1>
+    </div>
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="cylinders">Cylinders</label>
+        <input class="form-control" type="number" name="cylinders" placeholder="number of cylinders eg: 4 ~ 8">
+    </div>
+    <div class="form-group">
+        <label for="displacement">Displacement</label>
+        <input class="form-control" type="number" name="displacement" placeholder="displacement eg: 60 ~ 455">
+    </div>
+    <div class="form-group">
+        <label for="horsepower">Horsepower</label>
+        <input class="form-control" type="number" name="horsepower" placeholder="horsepower eg: 45 ~ 230">
+    </div>
+    <div class="form-group">
+        <label for="weight">Weight</label>
+        <input class="form-control" type="number" name="weight" placeholder="enter vechile weight eg: 1500 ~ 6000">
+    </div>
+    <div class="form-group">
+        <label for="acceleration">Acceleration</label>
+        <input class="form-control" type="number" name="acceleration" placeholder="acceleration eg: 8 ~ 25">
+    </div>            
+    <div class="form-group">
+        <label for="modelyear">Mode Year</label>
+        <input class="form-control" type="number" name="modelyear" placeholder="enter Vechile model-year eg: (70 ~ 80 ~ 90)">
+    </div>
+    <div class="form-group">
+        <label for="origin">Enter Origin Country</label>
+            <select class="form-control" name="origin" id="cars">
+                <option value="1">USA</option>
+                <option value="2">Japan</option>
+                <option value="3">Europe</option>                        
+            </select>
+    </div>
+    <div class="m-2">
+        <button class="shadow-lg btn btn-primary btn-primary btn-lg btn-block" type="submit">Predict Milage <i class="fab fa-python"></i></button>  
+    </div>
+    </form>
 </div>
 
 {% endblock %}

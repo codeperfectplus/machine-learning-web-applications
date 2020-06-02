@@ -1,9 +1,8 @@
-# [AlgorithmHackerRank](https://www.hackerrank.com/domains/algorithms)
+# [Portfolio Project](https://github.com/codePerfectPlus/Portfolio-Project)
 
-- [AlgorithmHackerRank](#algorithmhackerrank)
+- [Portfolio Project](#portfolio-project)
   - [Introduction](#introduction)
   - [Get Started](#get-started)
-  - [Difficulty Level](#difficulty-level)
   - [Usage](#usage)
   - [Support](#support)
   - [Contributing](#contributing)
@@ -14,28 +13,16 @@
 
 ## Introduction
 
-- HackerRank Algorithm Problems
-- Check [AlgorithmHackerRank](https://www.hackerrank.com/domains/algorithms) Challenge.
+This Python Projects is created with django and hosted on Heroku check the site for demo <http://codeperfectplus.herokuapp.com/>
 
 ## Get Started
 
-Download [Python 3](https://python.org/downloads)
-
-## Difficulty Level
-
-Hackerrank has around 5 levels of difficulty:
-
-- Easy
-- Intermediate
-- Hard
-- Expert
-- Advanced.
-
-I suggest you pick a certain language and start with the warmup challenges to get used to the environment.
+- Download [Python 3](https://python.org/downloads)
+- Download Django
 
 ## Usage
 
-A good way to start learning python concept.
+Django is A python framework for web devlopement and it's good for ML project.
 
 ## Support
 
@@ -63,8 +50,8 @@ For open-source projects, Under MIT License.
 
 ## Author
 
-- Project: [AlgorithmHackerRank](https://www.hackerrank.com/domains/algorithms)
+- Project: [Portfolio Project](https://github.com/codePerfectPlus/Portfolio-Project)
 - Author: CodePerfectPlus
-- Language: Python
+- Language: Python, JavaScript
 - Github: <https://github.com/codePerfectPlus>
-- Website: <http://codeperfectplus.github.io/>
+- Website: <http://codeperfectplus.herokuapp.com/>
