@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form class="form-group mt-2" method="post" action="gitapi_result">
+    {% csrf_token %}
+        <input type="text" class="form-control" name="username" placeholder="Enter Github Username">
+        <button class="shadow-lg btn btn-primary btn-primary btn-lg btn-block mt-4" type="submit">Search <i class="fab fa-python"></i></button>          
+    </form>
+{% endblock content %}
