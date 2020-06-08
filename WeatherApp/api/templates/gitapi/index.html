@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}CodePerfectPlus | Weather API{% endblock title %}
+{% block content %}
+    <form class="form-group mt-2" method="post" action="{% url 'result' %}">
+    {% csrf_token %}
+        <input type="text" class="form-control" name="city" placeholder="Enter City Name">
+        <button class="shadow-lg btn btn-primary btn-primary btn-lg btn-block mt-4" type="submit">Search <i class="fab fa-python"></i></button>          
+    </form>
+{% endblock content %}

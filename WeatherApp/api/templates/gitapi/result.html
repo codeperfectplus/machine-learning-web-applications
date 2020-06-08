@@ -1,0 +1,200 @@
+{% extends 'base.html' %}
+{% block title %} CodePerfectPlus | {{city_name}} {% endblock title %}
+{% block content %}
+<style>
+.emp-profile{
+    padding: 3%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-radius: 0.5rem;
+    background: #fff;
+}
+.profile-img{
+    text-align: center;
+}
+.profile-img img{
+    width: 70%;
+    height: 100%;
+}
+.profile-img .file {
+    position: relative;
+    overflow: hidden;
+    margin-top: -20%;
+    width: 70%;
+    border: none;
+    border-radius: 0;
+    font-size: 15px;
+    background: #212529b8;
+}
+.profile-head h5{
+    color: #333;
+}
+.profile-head h6{
+    color: #0062cc;
+}
+.proile-rating{
+    font-size: 12px;
+    color: #818182;
+    margin-top: 5%;
+}
+.proile-rating span{
+    color: #495057;
+    font-size: 15px;
+    font-weight: 600;
+}
+.profile-head .nav-tabs{
+    margin-bottom:5%;
+}
+.profile-head .nav-tabs .nav-link{
+    font-weight:600;
+    border: none;
+}
+.profile-head .nav-tabs .nav-link.active{
+    border: none;
+    border-bottom:2px solid #0062cc;
+}
+.profile-work{
+    padding: 14%;
+    margin-top: -15%;
+}
+.profile-work p{
+    font-size: 12px;
+    color: #818182;
+    font-weight: 600;
+    margin-top: 10%;
+}
+.profile-work a{
+    text-decoration: none;
+    color: #495057;
+    font-weight: 600;
+    font-size: 14px;
+}
+.profile-work ul{
+    list-style: none;
+}
+.profile-tab label{
+    font-weight: 600;
+}
+.profile-tab p{
+    font-weight: 600;
+    color: #0062cc;
+}
+</style>
+<div class="container emp-profile">        
+    <div class="row text-center">
+        <div class="col-md-2">                        
+        </div>
+        <div class="col-md-6">
+            <div class="profile-head">
+                <h1 class="font-weight-bold text-primary">
+                <img src="https://img.icons8.com/dusk/45/000000/city.png"/> {{city_name}},{{city_country}}
+                </h1>                                                                                                                
+                <img src="http://openweathermap.org/img/wn/{{icon}}@2x.png"/>
+                <p class="proile-rating">Population : <span>{{city_population}}</span></p>
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><img src="https://img.icons8.com/color/25/000000/wind-gauge.png"/> Weather</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">More <img src="https://img.icons8.com/color/25/000000/more.png"/></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                     <div class="col-md-2">                  
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">                        
+                    </div>
+                    <div class="col-md-8">
+                        <div class="tab-content profile-tab" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label><img src="https://img.icons8.com/dusk/30/000000/thermometer-automation.png"/> Temprature</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{temp}} &#8451;</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label><img src="https://img.icons8.com/dusk/30/000000/thermometer-automation.png"/> Max Temprature</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{temp_max}} &#8451;</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label><img src="https://img.icons8.com/dusk/30/000000/thermometer-automation.png"/> Min Temprature</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{temp_min}} &#8451;</p>
+                                            </div>
+                                        </div>                                        
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label><img src="https://img.icons8.com/dusk/30/000000/windsock.png"/> Weather</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{weather}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Description</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{description}}</p>
+                                            </div>
+                                        </div>                                                                        
+                            </div>
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label><img src="https://img.icons8.com/dusk/30/000000/compressor.png"/> Pressure</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{pressure}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label><img src="https://img.icons8.com/dusk/30/000000/humidity.png"/> Humidity</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{humidity}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label><img src="https://img.icons8.com/dusk/30/000000/water-transportation.png"/> Sea Level</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{sea_level}}</p>
+                                            </div>
+                                        </div>                                                                                                                                                                                                             
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label><img src="https://img.icons8.com/dusk/30/000000/about.png"/> About Project</label><br/>
+                                        <p>This Project is Devloped with Django Framework(Python3)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<div class="container col-md-8 mb-3">
+    <form class="form-group mt-2" method="post" action="{% url 'result' %}">
+    {% csrf_token %}
+    <input type="text" class="form-control" name="city" placeholder="Enter City Name">
+    <div class="container text-center mb-4">
+            <button class="shadow-lg btn btn-primary btn-lg text-white font-weight-bold my-2" style="width:280px" type="submit">Search Again</button>  
+        </div>
+    </form>
+</div>
+
+{% endblock content %}
