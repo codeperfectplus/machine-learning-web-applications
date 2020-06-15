@@ -3,9 +3,6 @@ import requests
 
 # Create your views here.
 def indexView(request):
-    return render(request, "gitapi/index.html")
-
-def resultView(request):
     if request.method == "POST":
         username = request.POST["username"]
         url = f"https://api.github.com/users/{username}"
@@ -27,4 +24,8 @@ def resultView(request):
             "updated_at":user_data["updated_at"],
             "followers_url":user_data["followers_url"],
         }
-    return render(request, "gitapi/result.html", context)
+        return render(request, "gitapi/result.html", context)
+    return render(request, "gitapi/index.html")
+
+
+    

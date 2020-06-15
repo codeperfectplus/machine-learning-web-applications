@@ -1,9 +1,7 @@
 {% extends 'base.html' %}
+{% block title %} CodePerfectPlus | {{login}} {% endblock title %}
 {% block content %}
 <style>
-body{
-    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
-}
 .emp-profile{
     padding: 3%;
     margin-top: 3%;
@@ -28,26 +26,11 @@ body{
     font-size: 15px;
     background: #212529b8;
 }
-.profile-img .file input {
-    position: absolute;
-    opacity: 0;
-    right: 0;
-    top: 0;
-}
 .profile-head h5{
     color: #333;
 }
 .profile-head h6{
     color: #0062cc;
-}
-.profile-edit-btn{
-    border: none;
-    border-radius: 1.5rem;
-    width: 70%;
-    padding: 2%;
-    font-weight: 600;
-    color: #6c757d;
-    cursor: pointer;
 }
 .proile-rating{
     font-size: 12px;
@@ -97,7 +80,7 @@ body{
     color: #0062cc;
 }
 </style>
-<div class="container emp-profile">
+<div class="container emp-profile">        
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-img">
@@ -112,7 +95,7 @@ body{
                                     <h6>
                                         {{company}}
                                     </h6>
-                                    <p class="proile-rating">RANKINGS : <span>8/10</span></p>
+                                    <p class="proile-rating">Location : <span>{{location}}</span></p>
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
                                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
@@ -123,7 +106,9 @@ body{
                             </ul>
                         </div>
                     </div>
-                    <!---->                    
+                     <div class="col-md-2">
+                        <button class="shadow-lg btn btn-primary font-weight-bold my-2" style="width:280px"><a class="text-white" target="_blank" href="https://github.com/codePerfectPlus/Portfolio-Project">Project Source Code</a></button>                        
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-md-4">                        
@@ -133,7 +118,7 @@ body{
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>User Id</label>
+                                                <label>GitHub Username</label>
                                             </div>
                                             <div class="col-md-6">
                                                 <p>{{login}}</p>
@@ -141,7 +126,7 @@ body{
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label>Name</label>
+                                                <label>Full Name</label>
                                             </div>
                                             <div class="col-md-6">
                                                 <p>{{name}}</p>
@@ -153,40 +138,6 @@ body{
                                             </div>
                                             <div class="col-md-6">
                                                 <p>{{email}}</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Phone</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>None</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Profession</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>{{company}}</p>
-                                            </div>
-                                        </div>
-                            </div>
-                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Created At</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>{{created_at}}</p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label>Last Update</label>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <p>{{updated_at}}</p>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -212,23 +163,61 @@ body{
                                             <div class="col-md-6">
                                                 <p>{{following}}</p>
                                             </div>
+                                        </div>                                        
+                            </div>
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Account Created At</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{created_at}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Account Last Updated at</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{updated_at}}</p>
+                                            </div>
+                                        </div>                        
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Profession</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>{{company}}</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Check Profile</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <a href="{{html_url}}" target="_blank">{{login}}</a>
+                                            </div>
                                         </div>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <label>Your Bio</label><br/>
+                                        <label>{{name}} Bio</label><br/>
                                         <p>{{bio}}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>        
+                </div>
+            </div>
+<div class="container col-md-8 mb-3">
+    <form class="form-group mt-2" method="post">
+        {% csrf_token %}
+        <label class="font-weight-bold" for="username"> Enter GitHub Username</label>
+        <input type="text" class="form-control" name="username" value="{{login}}">
+        <span class="text-muted ml-2">eg: codePerfectPlus</span>
+        <div class="container text-center mb-4">
+            <button class="shadow-lg btn btn-primary btn-lg text-white font-weight-bold my-2" style="width:280px" type="submit">Search Again</button>  
         </div>
-        <div class="container col-md-8">
-            <form class="form-group mt-2" method="post" action="gitapi_result">
-                {% csrf_token %}
-                <input type="text" class="form-control" name="username" placeholder="Search Another">
-                <button class="shadow-lg btn btn-primary btn-primary btn-lg btn-block m-4" type="submit">Search <i class="fab fa-python"></i></button>          
-                </form>
-        </div>
+    </form>
+</div>
 {% endblock content %}

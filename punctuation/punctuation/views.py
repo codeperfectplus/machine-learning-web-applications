@@ -3,9 +3,6 @@ import re
 from punctuation.removePunctuations import Punctuation
 
 def indexView(request):
-    return render(request, "punctuation/index.html")
-
-def predictView(request):
     if request.method=="POST":
         string = request.POST["string"]                        
         removePunc = request.POST.get("removePunc",False)
@@ -26,8 +23,6 @@ def predictView(request):
             context = {"result": string}
             
         return render(request, "punctuation/predict.html", context)    
-
-
-
+    return render(request, "punctuation/index.html")
 
 #https://stackoverflow.com/questions/5895588/django-multivaluedictkeyerror-error-how-do-i-deal-with-it

@@ -1,19 +1,30 @@
 {% extends 'base.html' %}
 
 {% block body %}
-
-<div class="container bg-dark text-info text-center">
-    <h1> Predict The Flower </h1>
+<div class="container text-center">    
+    <p>The Predicted flower class is {{result}}</p>
 </div>
-<div class="container bg-dark text-info text-center">
-        <h2>Setosa<h2>
-        <h2>versicolor<h2>
-        <h2>virginica<h2>
-</div>
-
-<div class="container bg-dark text-info text-center">
-    <h1>The Predicted Flower May be {{result}}.</h1>
-    <a href={% url 'home' %}>Predict Again</a>
+<div class="container-fluid m-2 p-3">
+    <form method="post">
+        {% csrf_token %}
+            <div class="form-group">
+                <label>Sepal length </label>
+                <input class="form-control" type="number" name="slength" placeholder="sepalLength">
+            </div>
+            <div class="form-group">
+                <label>Sepal width </label>
+                <input class="form-control" type="number" name="swidth" placeholder="sepalWidth">
+            </div>
+            <div class="form-group">
+                <label>Petal length </label>
+                <input class="form-control" type="number" name="plength" placeholder="petalLength">
+            </div>
+            <div class="form-group">
+                <label>Petal Width </label>
+                <input class="form-control" type="number" name="pwidth" placeholder="petalWidth">
+            </div>
+            <button type="submit" class="btn btn-dark" style="width:400px">Submit</button>
+    </form>
 </div>
 
 

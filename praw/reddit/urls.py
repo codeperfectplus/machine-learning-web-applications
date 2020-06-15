@@ -1,7 +1,6 @@
 from django.urls import path
-from reddit.views import indexView, resultView
+from reddit.views import indexView
 
 urlpatterns = [
     path("", indexView, name="reddit_home"),
-    path("result", resultView, name="reddit_result"),
 ]

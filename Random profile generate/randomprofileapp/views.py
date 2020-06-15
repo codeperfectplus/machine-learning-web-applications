@@ -4,12 +4,9 @@ from randomprofileapp.profilegenrator import Name
 
 # Create your views here.
 def indexView(request):
-    return render(request, "randomprofileapp/index.html")
-
-def resultView(request):
     if request.method== "POST":                
         name = Name()
         first, last, address, phone, email = name.full_profile()
         context = {"first":first, "last":last, "address":address, "phone":phone, "email":email}
-    return render(request, "randomprofileapp/result.html", context)
-
+        return render(request, "randomprofileapp/result.html", context)
+    return render(request, "randomprofileapp/index.html")

@@ -7,14 +7,14 @@
 </div>
 <!---->
 <div class="container shadow p-3 mb-2">
-    <form name="myForm" onsubmit="return validateForm()" method="post" action="mpg_predict" required>    
+    <form name="myForm" onsubmit="return validateForm()" method="post" required>    
     <div class="header shadow-lg p-1 rounded bg-primary text-center">
         <h1 class="display-6 text-white">Regression <img src="https://img.icons8.com/fluent/48/000000/project.png"/><h1>
     </div>
     {% csrf_token %}
     <div class="form-group">
         <label for="cylinders">Cylinders</label>
-        <input class="form-control" type="number" name="cylinders" placeholder="number of cylinders eg: 4 ~ 8">
+        <input class="form-control" type="number" name="cylinders" placeholder="number of cylinders eg: 4 ~ 8" required> 
     </div>
     <div class="form-group">
         <label for="displacement">Displacement</label>

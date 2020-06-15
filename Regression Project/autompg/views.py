@@ -4,12 +4,8 @@ import joblib
 
 with open("autompg/model/autompg.pkl", "rb") as file:
     model = joblib.load(file)
-# Create your views here.
-def indexView(request):
-    return render(request, "autompg/index.html")
 
-# cylinders,displacement,horsepower,weight,acceleration,model year,origin
-def predictView(request):
+def indexView(request):
     if request.method == "POST":
         cylinders = request.POST["cylinders"]
         displacement = request.POST["displacement"]
@@ -28,3 +24,5 @@ def predictView(request):
         context = {"result": result}
         
         return render(request, 'autompg/predict.html',context)
+    return render(request, "autompg/index.html")
+    

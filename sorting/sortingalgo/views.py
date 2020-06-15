@@ -5,9 +5,6 @@ from sortingalgo.mergesort import mergeSort
 from sortingalgo.bubblesort import BubbleSort
 
 def indexView(request):
-    return render(request, "sortingalgo/index.html")
-
-def resultView(request):
     if request.method== "POST":
         values = request.POST["values"]
         choosedAlgoritm = request.POST.get("sort", "bubble")
@@ -28,4 +25,6 @@ def resultView(request):
             print(result)
             context = {"result" : result, "algo": choosedAlgoritm, "time": "UnderConstruction"}
             
-    return render(request, "sortingalgo/result.html", context)
+        return render(request, "sortingalgo/result.html", context)
+    return render(request, "sortingalgo/index.html")
+    

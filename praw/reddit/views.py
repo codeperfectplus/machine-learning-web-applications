@@ -3,9 +3,6 @@ import praw
 from reddit.secret import id, secret, user, pswd, agent
 
 def indexView(request):
-    return render(request, "reddit/index.html")
-
-def resultView(request):
     if request.method == "POST":
         
         redditSearchWord = request.POST["redditSearchWord"]
@@ -15,6 +12,7 @@ def resultView(request):
         #print(context)
 
         return render(request, "reddit/result.html", context)
+    return render(request, "reddit/index.html")    
 
 def GetNews(searchWord):
     reddit = praw.Reddit(
