@@ -26,6 +26,3 @@ def indexView(request):
         }
         return render(request, "gitapi/result.html", context)
     return render(request, "gitapi/index.html")
-
-
-    
