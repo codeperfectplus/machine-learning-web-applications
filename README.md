@@ -1,16 +1,15 @@
+[![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-360/)   
 ![issues](https://img.shields.io/github/issues/codePerfectPlus/Portfolio-Project?style=plastic)
 ![forks](https://img.shields.io/github/forks/codePerfectPlus/Portfolio-Project)
 ![stars](https://img.shields.io/github/stars/codePerfectPlus/Portfolio-Project)
 ![License](https://img.shields.io/github/license/codePerfectPlus/Portfolio-Project)
 
-
+Visitor Counter ![Visitor Count](https://profile-counter.glitch.me/codeperfectplus/count.svg)
 
 ![header](https://capsule-render.vercel.app/api?type=wave&color=gradient&height=300&section=header&text=Portfolio%20Project&fontSize=90)
 
-## Visitor Counter ![Visitor Count](https://profile-counter.glitch.me/codeperfectplus/count.svg)
-
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)                 
-[![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-360/)   
+
 [![django_svg_logo](https://static.djangoproject.com/img/logos/django-logo-positive.svg)](https://docs.djangoproject.com/en/3.0/)
 
 - [Portfolio Project](#portfolio-project)
