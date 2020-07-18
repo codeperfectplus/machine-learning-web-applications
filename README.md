@@ -1,4 +1,11 @@
-![header](https://capsule-render.vercel.app/api?type=rect&color=gradient&height=300&section=header&text=Portfolio%20Project&fontSize=90)
+![issues](https://img.shields.io/github/issues/codePerfectPlus/Portfolio-Project?style=plastic)
+![forks](https://img.shields.io/github/forks/codePerfectPlus/Portfolio-Project)
+![stars](https://img.shields.io/github/stars/codePerfectPlus/Portfolio-Project)
+![License](https://img.shields.io/github/license/codePerfectPlus/Portfolio-Project)
+
+
+
+![header](https://capsule-render.vercel.app/api?type=wave&color=gradient&height=300&section=header&text=Portfolio%20Project&fontSize=90)
 
 ## Visitor Counter ![Visitor Count](https://profile-counter.glitch.me/codeperfectplus/count.svg)
 
