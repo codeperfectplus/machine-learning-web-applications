@@ -11,7 +11,7 @@ django = "==3.0.12"
 pandas = "==1.0.3"
 scikit-learn = "==0.23.1"
 joblib = "==0.15.1"
-djangorestframework = "==3.11.0"
+djangorestframework = "==3.11.2"
 
 [requires]
 python_version = "3.7"
